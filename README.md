@@ -1,4 +1,5 @@
-# Online Movie Booking Project## Getting Started
+# Online Movie Booking Project
+## Getting Started
 
 ### Prerequisites
 
