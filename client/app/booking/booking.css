@@ -1,0 +1,41 @@
+.seat{
+    height: 20px;
+    width: 20px;
+    
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 10.5px;
+    color:  black;
+    border: 1px solid red;
+  
+    
+    border-radius: 20%;
+    padding-top: 1px;
+    line-height: 21px;
+  
+   
+    font-weight: 400;
+  
+    
+}
+.seat:hover{
+    background: red;
+    color: red;
+}
+.seatselected{
+    border: 2px solid black;
+    background: red;
+}
+.bookingSumary{
+    margin-top: 8%;
+    
+}
+.bookingSumary button{
+    width: 100%;
+}
+.SilverSelected{
+    visibility: hidden;
+}
+.Silver{
+    font-weight: normal;
+}

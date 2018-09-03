@@ -1,0 +1,151 @@
+<div class="container-fluid" style="background-color: lightgrey;color: white">
+    <div class="row"><br>
+
+        
+        <div class="col-md-2"></div>
+        <div class="col-md-6">
+                
+        <form action="/ticket">
+            <table class="form-group table" style="padding: 15px;background-color:black; border-radius: 10px; color: red">
+                <tr><td colspan="5" style="text-align: center;">
+                    <h1>Payment Details</h1></td></tr>
+                <tr><td colspan="5">&nbsp;</td></tr>
+                    
+                <tr > 
+                    
+                        <th style="font-size: 16px"  >Name&nbsp;&nbsp;&nbsp;</th>
+                        <td > <input id="UName" ng-model="paymentCtrl.Name" type="text"/></td>
+                        <th colspan="2" style="font-size: 16px" >Mobile Number&nbsp;&nbsp;&nbsp;</th>
+                        <td><input id="Contact" ng-model="paymentCtrl.Contact" type="text"></td>  
+                    
+                    
+
+                </tr>
+                <tr><td colspan="5">&nbsp;</td></tr>
+                <tr><td colspan="5">&nbsp;</td></tr>
+               
+             <tr><td colspan="5" style="text-align: center;"><h1>Card Details</h1></td></tr>
+                        <tr>
+                            <th colspan="5"><h3>Name on Card</h3></th>
+                        </tr>
+                        <tr> <td colspan="5"> <input type="text" class="form-control"/>
+                        </td>
+                           
+                        </tr>
+
+                        <tr>
+                            <td colspan="5"> <h3>Card Number</h3></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                    <input class="form-control" type="text" name="number"  placeholder="••••" required="required" maxlength="4">
+                            </td>
+                            <td>
+                                    <input class="form-control" type="text" name="number"  placeholder="••••" required="required" maxlength="4">
+                            </td>
+                            <td>
+                                    <input class="form-control" type="text" name="number"  placeholder="••••" required="required" maxlength="4">
+                            </td>
+                            <td>
+                                    <input class="form-control" type="text" name="number"  placeholder="••••" required="required" maxlength="4">
+                            </td>
+                        </tr>
+                    
+
+                        <tr>
+                            <td colspan="3"><h3>Expiry Date</h3></td>
+                            
+                            <td >&nbsp;</td>
+                        
+                            <td colspan="2">
+                              <center> <h3> CVV</h3></center>
+                            </td>
+                        </tr>
+
+                            <tr> 
+                            <td colspan="2"> 
+                                   <select>
+                                       <option value="MM" >MM</option>
+                                       <option value="01" >01</option>
+                                       <option value="02" >02</option>
+                                       <option value="03" >03</option>
+                                       <option value="04" >04</option>
+                                       <option value="05" >05</option>
+                                       <option value="06" >06</option>
+                                       <option value="07" >07</option>
+                                       <option value="08" >08</option>
+                                       <option value="09" >09</option>
+                                       <option value="10" >10</option>
+                                       <option value="11" >11</option>
+                                       <option value="12" >12</option>
+
+
+                                   </select>
+                                   /
+                                   <select>
+                                        <option value="YY" >YY</option>
+                                        <option value="18" >18</option>
+                                        <option value="19" >19</option>
+                                        <option value="20" >20</option>
+                                        <option value="21" >21</option>
+                                        <option value="22" >22</option>
+                                        <option value="23" >23</option>
+                                        <option value="24" >24</option>
+                                        <option value="25" >25</option>
+                                        <option value="26" >26</option>
+                                        <option value="27" >27</option>
+                                        <option value="28" >28</option>
+ 
+ 
+                                    </select>
+                            </td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>                            <td>&nbsp;</td>
+
+                       
+                             <td>
+                            <input class="security-code form-control" inputmode="numeric" type="password" name="security-code" placeholder="•••" required="required" maxlength="3">
+                        </td>
+                        </tr>
+                    </table>
+
+                   <div>
+                                    <center> <input type="submit" value="Pay"  style="background-color: red; border-radius: 4px; color: white" ng-click="paymentCtrl.payment()"/></center>
+                                </div>    
+                        
+                    </form>
+
+                        </div>
+        
+    
+    <div class="col-md-4">
+       
+        <table class="table" style="background-color:black; border-radius: 10px; color: red">
+            <thead>
+                    <th colspan="2">
+                            <center> <h2>Order Summary</h2> </center>
+                    </th>
+            </thead>
+            <tr>
+                    <th> Movie Name: </th>
+                    <td>{{paymentCtrl.movieName}}</td>
+            </tr>
+            
+            <tr>
+                    <th> Number of Seats: </th>
+                    <td id="tickets">{{paymentCtrl.NOT}}</td>
+            </tr>
+            <tr>
+                    <th> Seat Number </th>
+                    <td id="seatNumbers"> {{paymentCtrl.seatN}} </td>
+            </tr>
+            <tr>
+                            <th>Total Amount </th>
+                            <td id="total">{{paymentCtrl.total}}  </td>
+                    </tr>
+           
+           
+            
+        </table>
+    </div>
+    </div>
+</div>

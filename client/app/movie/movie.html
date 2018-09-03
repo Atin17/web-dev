@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row" >
+        <div class="col-md-8">
+        <h2 >Add Movies </h2>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="Movie Name" ng-model="movieCtrl.movieName" class="form-control" /><br/>
+                <input type="text" placeholder="Year" ng-model="movieCtrl.Year" class="form-control" /><br/>
+                <button type="submit" ng-click="movieCtrl.findMovie()" class="btn btn-success">Search Movie</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <form>
+                <table class="table">
+                    <tr>
+                        <th>Movie</th>
+                        <th> Actors</th>
+                        <th> Year</th>
+                        <th> Genre</th>
+                        <th> Runtime</th>
+                    </tr>
+                    <tr>
+                        <td style="align-content: center">
+                            <img src="{{movieCtrl.MovieData.Poster}}" width="150" height="200"/>
+                        </td>
+                        <td style="vertical-align: middle;">{{movieCtrl.MovieData.Actors}}</td>
+                        <td style="vertical-align: middle;">{{movieCtrl.MovieData.Year}}</td>
+                        <td style="vertical-align: middle;">{{movieCtrl.MovieData.Genre}}</td>
+                        <td style="vertical-align: middle;">{{movieCtrl.MovieData.Runtime}}</td>
+                        <td style="vertical-align: middle;"><Button ng-click="movieCtrl.addMovie()" class="btn btn-success">Add</Button></td>
+                    </tr>
+                    <!-- <tr>
+                        <td></td>
+                    </tr> -->
+                </table>
+                </form>
+            </div>
+        </div>
+    </div>
+            
+    <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                        <h2>Movies Added</h2>
+                        <br>
+                    <table class="table">
+                        <tr>
+                            <th>Movie</th>
+                            <th> Actors</th>
+                            <th> Year</th>
+                            <th> Genre</th>
+                            <th> Runtime</th>
+                        </tr>
+                        <tr ng-repeat="m in movieCtrl.Movies">
+                            <td style="vertical-align: middle;"><img src="{{m.Poster}}" width="150" height="200">       </td>
+                            <td style="vertical-align: middle;">{{m.Actors}}</td>
+                            <td style="vertical-align: middle;">{{m.Year}}</td>
+                            <td style="vertical-align: middle;">{{m.Genre}}</td>
+                            <td style="vertical-align: middle;">{{m.Runtime}}</td>
+                                
+                            <td style="vertical-align: middle;">
+                                <button class="btn btn-danger" ng-click="movieCtrl.RemoveMovie(m)">X</button>
+                            </td>
+    
+    
+                        </tr>
+                       
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

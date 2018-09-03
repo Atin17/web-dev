@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <table class="table" style="background-color:black; border-radius: 10px; color: red">
+                <thead>
+                        <th colspan="3">
+                                <center> <h2>Ticket</h2> </center>
+                        </th>
+                </thead>
+                <tr>
+                        <td rowspan="5">
+                                <div ng-repeat="m in ticketCtrl.Movies | filter: ticketCtrl.movieName ">
+                                <img height="280" width="200" src="{{m.Poster}}"/>     
+                                </div>
+                        </td>
+
+                </tr>
+                <tr>
+                         <td>
+                                {{ticketCtrl.Uname}}
+                                                
+                         </td>
+                         
+                      
+                        <th> Movie Name: </th>
+                        <td>{{ticketCtrl.movieName}}</td>
+                </tr>
+                
+                <tr>
+                        <th> Number of Seats: </th>
+                        <td colspan="2" id="tickets">{{ticketCtrl.NOT}}</td>
+                </tr>
+                <tr>
+                        <th> Seat Number </th>
+                        <td colspan="2" id="seatNumbers"> {{ticketCtrl.seatN}} </td>
+                </tr>
+                <tr>
+                                <th>Total Amount </th>
+                                <td colspan="2" id="total">{{ticketCtrl.total}}  </td>
+                        </tr>
+               
+               
+                
+            </table>
+            
+        </div>
+    </div>
+</div>
